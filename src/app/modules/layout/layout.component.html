@@ -1,0 +1,9 @@
+<div class="Layout">
+    <div class="Layout__Container">
+        <app-nav></app-nav>
+        <div [ngSwitch] = "this.$student.page" class="Layout__Main">
+            <app-student-page *ngSwitchCase = "this.EPage.StudentPage"></app-student-page>
+            <app-admin-page *ngSwitchCase = "this.EPage.AdminPage"></app-admin-page>
+        </div>
+    </div>
+</div>

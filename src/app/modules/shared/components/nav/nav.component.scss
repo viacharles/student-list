@@ -1,0 +1,52 @@
+.Nav {
+    width: 100%;
+    position: relative;
+    top: 0;
+    &__Container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        &>input {
+            width: 210px;
+            height: 35px;
+            margin: 32px 15px;
+            padding: 3px 15px;
+            border-radius: 12px;
+            border: 0;
+            filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+            &:hover > &__List {
+                visibility:visible;
+        }
+    }
+    &__List {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 58px;
+        right: 15px;
+        min-width: 210px;
+        padding: 0 15px;
+        background-color: #fff;
+        border-radius: 12px;
+        visibility: hidden;
+        }
+        & > li {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-width:200px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgb(216, 224, 231);
+        }
+        & > li:last-child {
+            height: 3px;
+            width: 100%;
+            border: 0;
+        }
+    }
+}
