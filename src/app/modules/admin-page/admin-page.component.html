@@ -5,14 +5,14 @@
             <ul class="AdminPage__Info">
                 <li>
                     <span>姓名</span>
-                    <input type="text" placeholder="輸入姓名" [(ngModel)]='this.$student.name'>
+                    <input type="text" placeholder="輸入姓名" [(ngModel)]='this.name'>
                 </li>
                 <li>
                     <span>分數</span>
-                    <input type="number" [(ngModel)]='this.$student.score'>
+                    <input type="number" [(ngModel)]='this.score'>
                 </li>
                 <li>
-                    <button (click)='this.$student.addStudent(this.$student.name, this.$student.score)'>加入</button>
+                    <button (click)='this.$student.addStudent(this.name, this.score)'>加入</button>
                 </li>
             </ul>
         </div>

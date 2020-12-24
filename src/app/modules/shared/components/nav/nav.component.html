@@ -1,9 +1,9 @@
 <div class="Nav">
     <div class="Nav__Container">
-        <input type="text" >
+        <input type="text">
         <ul class="Nav__List">
-            <li (click) = 'this.$student.setAdmin()'>管理員</li>
-            <li *ngFor ='let student of this.$student.students' (click) ='this.$student.setStudent(student.name, student.score)'>{{student.name}}</li>
+            <li (click)='this.$student.isAdminPage()'>管理員</li>
+            <li *ngFor='let student of this.$student.students' (click)='this.isStudentPage(student)'>{{student.name}}</li>
             <li></li>
         </ul>
     </div>

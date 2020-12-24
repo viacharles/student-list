@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Student } from '../shared/models/student.model';
 import { StudentService } from '../shared/services/student.service';
 
 @Component({
@@ -9,10 +10,17 @@ import { StudentService } from '../shared/services/student.service';
 export class StudentPageComponent implements OnInit {
 
   constructor(
-    public $student:StudentService,
+    public $student: StudentService,
   ) { }
+  @Input() student: Student|undefined;
 
   ngOnInit(): void {
   }
+
+
+  public scoreColor: string = 'average';
+
+
+
 
 }
