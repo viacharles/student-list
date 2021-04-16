@@ -1,0 +1,9 @@
+<div class="Directive">
+  <section class="Directive__Container">
+    <input type="text" placeholder="這裡輸入超過6個字會消失" [(ngModel)]='this.words'>
+    <span class="Directive__Config" [appHideWords]="this.words">
+      {{this.words}}
+    </span>
+
+  </section>
+</div>

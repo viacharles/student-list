@@ -21,6 +21,11 @@
       "dom"
     ]
   },
+  "path": {
+    "@styles/*": [
+      "src/styles/*"
+    ]
+  },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

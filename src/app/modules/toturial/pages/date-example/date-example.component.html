@@ -1,0 +1,6 @@
+<h1>{{this.today | date:this.format }}</h1>
+<ul>
+    customize date format
+    <li (click) = "this.format = 'yyy-MM-dd'">yyy-mm-dd</li>
+    <li (click) = "this.format = 'yyy-MM-dd shortTime'">yyy-mm-dd : h.m</li>
+</ul>

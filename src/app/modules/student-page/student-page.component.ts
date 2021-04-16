@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { StudentService } from '../shared/services/student.service';
+import { StudentService } from './../shared/services/student.service';
+import { Admin, Student } from './../shared/models/student.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { EAdminAuth } from 'src/app/utilities/enums/admin.enums';
+
 
 @Component({
   selector: 'app-student-page',
@@ -9,10 +12,16 @@ import { StudentService } from '../shared/services/student.service';
 export class StudentPageComponent implements OnInit {
 
   constructor(
-    public $student:StudentService,
   ) { }
 
+  @Input() student: Student = new Student('', 0);
+  @Input() admin: Admin = new Admin('', EAdminAuth.General);
+
   ngOnInit(): void {
+  }
+
+  get EAdminAuth(): typeof EAdminAuth {
+    return EAdminAuth;
   }
 
 }

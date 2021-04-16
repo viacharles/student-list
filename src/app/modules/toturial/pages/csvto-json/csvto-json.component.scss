@@ -1,0 +1,25 @@
+.outLay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  &__Container {
+    display: flex;
+    flex-direction: row;  // 對齊上方
+    align-items: start;
+    width: 100%;
+    height: 100%;
+  }
+  &__SideBar {
+    width: 20%;
+    height: 100%;
+  }
+  &__Main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; // 左右置中, 對齊上方
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+}

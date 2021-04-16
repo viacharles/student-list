@@ -1,0 +1,9 @@
+@mixin flex($d) {
+    display: flex;
+    flex-direction: $d;
+}
+@mixin flex-a($d,$p) {
+    display: flex;
+    flex-direction: $d;
+    align-items: $p;
+}

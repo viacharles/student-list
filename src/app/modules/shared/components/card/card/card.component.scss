@@ -1,0 +1,36 @@
+
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 250px;
+  width: 120px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.fadeout-left {
+  animation: fadeout-left 1s;
+  animation-fill-mode: forwards;
+}
+.fadeout-right {
+  animation: fadeout-right 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout-left {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-100vw);
+  }
+}
+@keyframes fadeout-right {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  100% {
+    transform: translateY(-50%) translateX(100vw);
+  }
+}

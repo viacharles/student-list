@@ -1,9 +1,11 @@
 <div class="Layout">
     <div class="Layout__Container">
-        <app-nav></app-nav>
-        <div [ngSwitch] = "this.$student.page" class="Layout__Main">
-            <app-student-page *ngSwitchCase = "this.EPage.StudentPage"></app-student-page>
-            <app-admin-page *ngSwitchCase = "this.EPage.AdminPage"></app-admin-page>
+        <app-nav (emit)='this.student = $event'
+            (emitAdmin)='this.admin = $event'></app-nav>
+        <div class="Layout__Main" [ngSwitch]='this.$student.page'>
+            <app-student-page *ngSwitchCase='this.EPage.StudentPage' [student]='this.student' [admin]='this.admin'></app-student-page>
+            <app-admin-page *ngSwitchCase='this.EPage.AdminPage' [student]='this.student' [admin]='this.admin'></app-admin-page>
+            <app-default-page *ngSwitchCase='this.EPage.default'></app-default-page>
         </div>
     </div>
 </div>

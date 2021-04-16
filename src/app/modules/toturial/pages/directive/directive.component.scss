@@ -1,0 +1,56 @@
+@import "../../../../../styles/mixin.scss";
+
+.Directive {
+  width: 100%;
+  height: 100%;
+  &__Container {
+    @include flex-a(column, center);
+    width: 100%;
+    height: 100%;
+    & > input {
+      height: 40px;
+      padding: 0 5%;
+      margin: 20% auto 10% auto;
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-size: 25px;
+      font-weight: 500;
+
+      border: 1px solid white;
+      border-radius: 8px;
+      background: none;
+      outline: none;
+      &:hover {
+        border: 1px solid rgb(150, 186, 240);
+        box-shadow: 0 0 0 4px rgb(150, 186, 240);
+      }
+      &::placeholder {
+        font-size: 20px;
+        color: rgb(233, 233, 233);
+        font-weight: normal;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  &__Config {
+    @include flex-a(row, center);
+    justify-content: center;
+
+    & > button {
+      width: 100px;
+      height: 40px;
+      margin: 0 3%;
+      font-size: 30px;
+      color: rgb(94, 142, 214);
+
+      white-space: nowrap;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      &:active {
+        background-color: rgb(128, 159, 194);
+        border: 4px solid rgb(150, 186, 240);
+      }
+    }
+  }
+}

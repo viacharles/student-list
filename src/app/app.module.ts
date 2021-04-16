@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentPageComponent } from './modules/student-page/student-page.component';
 import { AdminPageComponent } from './modules/admin-page/admin-page.component';
 import { NavComponent } from './modules/shared/components/nav/nav.component';
 import { LayoutComponent } from './modules/layout/layout.component';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { DefaultPageComponent } from './modules/default-page/default-page.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +15,13 @@ import { FormsModule, NgForm } from '@angular/forms';
     StudentPageComponent,
     AdminPageComponent,
     NavComponent,
-    LayoutComponent
+    LayoutComponent,
+    DefaultPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
   ],
   providers: [],

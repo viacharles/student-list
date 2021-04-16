@@ -21,7 +21,8 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        font-size: 36px;
+        font-size: 80px;
+        font-weight: 700;
         font-family: Arial, Helvetica, sans-serif;
     }
     &__Info {
@@ -35,13 +36,68 @@
         list-style: none;
         & > li {
             padding: 5px 0;
-            & > span:first-child {
-                font-size: 15px;
-            }
-            & > span:nth-child(2) {
-                padding-left: 15px;
-                font-size: 26px;
+            font-size: 25px;
+            font-weight: normal;
+            height: 80px;
+                & > p {
+                    font-size: 15px;
+                    margin: 5px 0;
+                }
+                &> h1 {
+                    font-size: 14px;
+                    font-weight: 100;
+                    color: rgb(114, 151, 221);
+                }
+            &> input {
+                position: relative;
+                font-size: 25px;
+                border: none;
+                outline: none;
+                width: 150px;
+                padding-left: 10px;
+//                 &:hover:before {
+//                     position: fixed;
+//                     z-index: 100;
+// background-color: rgb(187, 19, 19);
+//                     border: 1px solid rgb(151, 175, 219);
+//                     border-radius: 4px;
+//                 }
             }
         }
     }
+}
+.tPriority {
+        padding: 5px 0;
+        font-size: 25px;
+        font-weight: normal;
+        &> span{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            & > p {
+                font-size: 15px;
+            }
+            &> h1 {
+                font-size: 14px;
+                font-weight: 400;
+                color: rgb(114, 151, 221);
+            }
+        }
+        &> input {
+            position: relative;
+            font-size: 25px;
+            border: none;
+            outline: none;
+            width: 150px;
+            padding-left: 10px;
+                &:hover:before {
+                    position: fixed;
+                    z-index: 100;
+                    top: 0;
+                    right: 0;
+background-color: rgb(187, 19, 19);
+                    border: 1px solid rgb(151, 175, 219);
+                    border-radius: 4px;
+                }
+        }
 }

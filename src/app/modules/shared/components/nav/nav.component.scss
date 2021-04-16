@@ -3,29 +3,172 @@
     position: relative;
     top: 0;
     &__Container {
+        position: fixed;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
         width: 100%;
-        &>input {
-            width: 210px;
+        &>button {
+            cursor: pointer;
+            width: 240px;
             height: 35px;
             margin: 32px 15px;
             padding: 3px 15px;
+            font-size: 16px;
+            opacity: 0.8;
+            color: rgb(255, 255, 255);
+            background-color: rgb(67, 99, 202);
             border-radius: 12px;
             border: 0;
+            outline-style: none;
             filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
-            &:hover > &__List {
-                visibility:visible;
+            &:hover {
+                color: rgb(56, 65, 105);
+                background-color: #fff;
+                filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+                opacity: 0.9;
+                margin-top: 30px;
+                transition-duration: 0.1s;
+            }
+        }
+        &>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 58px;
+            right: 15px;
+            // visibility: hidden;
         }
     }
-    &__List {
+    &__AdminList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 210px;
+        padding: 0 15px;
+       margin-bottom: 0px;
+       background-color: rgb(255, 255, 255);
+       border-radius: 12px;
+        list-style: none;
+        &>li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 88%;
+            height: 30px;
+            padding: 3px 15px;
+            border-bottom: 1px solid rgb(216, 224, 231);
+        }
+        &>li:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 100%;
+            font-size: 14px;
+            color: rgb(158, 158, 158);
+            padding: 3px 3px 0 3px;
+            border: none;
+        }
+        &>li:last-child {
+            height: 5px;
+            width: 100%;
+            border: 0;
+            // border-radius: 0 0 12px 12px;
+        }
+    }
+   
+    &__StudentList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 210px;
+        padding: 0 15px;
+       margin: 5px 0 0 0;
+       background-color: #fff;
+       border-radius: 12px;
+        // visibility: hidden;
+        list-style: none;
+        &>li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 88%;
+            height: 30px;
+            padding: 3px 15px;
+            background-color: #fff;
+            border-bottom: 1px solid rgb(216, 224, 231);
+            border-radius: 12px 12px 0 0;
+        }
+        &>li:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 100%;
+            font-size: 14px;
+            color: rgb(158, 158, 158);
+            padding: 3px 3px 0 3px;
+            border: none;
+        }
+        &>li:last-child {
+            height: 5px;
+            width: 100%;
+            border: 0;
+            border-radius: 0 0 12px 12px;
+        }
+    }
+    &__ClassListOn {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: fixed;
+        z-index: 30;
+        top: 58px;
+        right: 15px;
+        min-width: 210px;
+        padding: 0 15px;
+        background-color: #fff;
+        border-radius: 12px;
+        // visibility: hidden;
+        list-style: none;
+        filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+        &::before {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: rgb(163, 22, 22);
+        }
+        &>li {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-width: 200px;
+            height: 35px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgb(216, 224, 231);
+        }
+        &>li:hover {
+            background-color: rgb(202, 225, 255);
+        }
+    }
+    &__ClassListOff {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 30;
         top: 58px;
         right: 15px;
         min-width: 210px;
@@ -33,20 +176,18 @@
         background-color: #fff;
         border-radius: 12px;
         visibility: hidden;
-        }
-        & > li {
+        list-style: none;
+        filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+        &>li {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            min-width:200px;
+            min-width: 200px;
+            height: 35px;
             padding: 10px 0;
             border-bottom: 1px solid rgb(216, 224, 231);
         }
-        & > li:last-child {
-            height: 3px;
-            width: 100%;
-            border: 0;
-        }
     }
 }
+

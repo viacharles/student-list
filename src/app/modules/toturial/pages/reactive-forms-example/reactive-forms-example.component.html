@@ -1,0 +1,33 @@
+<div class="RFE">
+    <div class="RFE__Container">
+        <form [formGroup]="this.form" (ngSubmit)="this.submit()" class="RFE__filed">
+            <input placeholder="email" formControlName="email" type="text">
+            <p *ngIf="this.form.get('email')?.invalid && this.form.get('email')?.touched">{{this.getErrorMsg("email")}}
+            </p>
+            <input placeholder="password" formControlName="password" type="password">
+            <p *ngIf='this.form.get("password")?.invalid && this.form.get("password")?.touched'>
+                {{this.getErrorMsg("password")}}</p>
+            <button type="submit" [disabled]="this.form.invalid">送出</button>
+        </form>
+    </div>
+
+</div>
+
+<div class="RFE">
+    <div class="RFE__Container">
+        <form [formGroup]='this.form' (ngSubmit)='this.submit()' class="RFE__filed">
+            <input
+            formControlName='email'
+            placeholder='email'
+            type="text">
+            <p *ngIf='this.form.get("eamil")?.invalid && this.form.get("email")?.touched '>{{this.getErrorMsg('email')}}</p>
+            <input
+            formControlName='password'
+            placeholder="password"
+            type='password'>
+            <p *ngIf='this.form.get("password")?.invalid && this.form.get("password")?.touched '>{{this.getErrorMsg('password')}}</p>
+            <button type="submit" [disabled]="this.form.invalid">送出</button>
+        </form>
+    </div>
+
+</div>

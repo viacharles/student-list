@@ -1,4 +1,5 @@
 export enum EPage {
-    AdminPage ,
-    StudentPage , 
+    StudentPage,
+    AdminPage,
+    default,
 }

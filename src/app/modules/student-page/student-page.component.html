@@ -1,17 +1,34 @@
 <div class="StudentPage">
     <div class="StudentPage__Container">
         <div class="StudentPage__Frame">
-            <span class="StudentPage__Class">{{this.$student.class}}</span>
+            <span class="StudentPage__Class">{{this.student?.scoreClass}}</span>
             <ul class="StudentPage__Info">
-                <li>
-                    <span>姓名</span>
-                    <span>{{this.$student.name}}</span>
-                </li>
-                <li>
-                    <span>分數</span>
-                    <span>{{this.$student.score}}</span>
-                </li>
+                <ng-container *ngIf="this.admin.auth === this.EAdminAuth.General ; else tPriority">
+                    <li>
+                        <p>姓名</p>
+                        {{this.student?.name}}
+                    </li>
+                    <li>
+                        <p>分數</p>
+                        {{this.student?.score}}
+                    </li>
+                </ng-container>
             </ul>
         </div>
     </div>
 </div>
+
+<ng-template #tPriority>
+    <li class="tPriority"> 
+        <span>
+            <p>姓名</p>&nbsp;<h1> (可編輯)</h1>
+        </span>
+        <input [(ngModel)]='this.student.name'>
+    </li>
+    <li class="tPriority">
+        <span>
+            <p>分數</p>&nbsp;<h1> (可編輯)</h1>
+        </span>
+        <input [(ngModel)]='this.student.score'>
+    </li>
+</ng-template>

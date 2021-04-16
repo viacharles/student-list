@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardComponent } from './components/card/card/card.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CardComponent],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule
+  ],
+  exports: [
+    CardComponent
   ]
 })
 export class ShareModule { }

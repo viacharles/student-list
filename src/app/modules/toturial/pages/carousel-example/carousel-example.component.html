@@ -1,0 +1,12 @@
+<div class="Carousel">
+
+  <div class="Carousel__Container">
+    <div class="Carousel__Config" (mouseover) = "this.mouseOver()"  (mouseleave)="this.mouseOut()">
+      <span *ngFor="let i of this.images; let index = index"
+        [class.Carousel__Config--active]="this.current === index" (click)="this.stopCarousel(index)"></span>
+    </div>
+    <div (mouseover) = "this.mouseOver()"  (mouseleave)="this.mouseOut()" class="Carousel__Img">
+      <img *ngFor='let img of this.film' [src]='img' [class.move]="this.isMove" alt="">
+    </div>
+  </div>
+</div>
